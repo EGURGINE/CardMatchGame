@@ -17,6 +17,7 @@ public class CardMatchManager : MonoBehaviour
     private List<bool> gameClearChecker = new List<bool> ();
 
     [SerializeField] private Text percent;
+    [SerializeField] private GameObject roulettePanel;
 
     //½Ì±ÛÅæ
     private void Awake()
@@ -28,8 +29,6 @@ public class CardMatchManager : MonoBehaviour
     {
         percent.text = RandPercent.thisPercent.ToString() + "%";
     }
-
-
     private void Start()
     {
 
@@ -84,7 +83,7 @@ public class CardMatchManager : MonoBehaviour
     private void GameClearCheck(int cardType, bool isClear)
     {
 
-        bool gameClear = false;
+        bool gameClear = true;
 
         gameClearChecker[cardType] = isClear;
 
@@ -93,7 +92,7 @@ public class CardMatchManager : MonoBehaviour
             if (card == false) gameClear = card;
         }
 
-        if (gameClear) /* Å¬¸®¾î Ã¢ ¶ç¿ì±â*/ ;
+        if (gameClear) roulettePanel.SetActive(gameClear);
     }
 
     //Ä«µå »ý¼º

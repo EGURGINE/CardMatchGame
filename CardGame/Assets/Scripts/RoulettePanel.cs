@@ -13,11 +13,11 @@ public class RoulettePanel : MonoBehaviour
     [SerializeField] Transform textPos;
     [SerializeField] float posY;
 
-
-    void Start()
+    private void OnEnable()
     {
         StartCoroutine(Event());
     }
+
     IEnumerator Event()
     {
         yield return new WaitForSeconds(0.5f);
@@ -36,10 +36,5 @@ public class RoulettePanel : MonoBehaviour
                 DIE.transform.DOMove(textPos.position , 1f);
             }
         });
-    }
-
-    void Update()
-    {
-        
     }
 }
