@@ -17,6 +17,9 @@ public class StartButton : MonoBehaviour
     {
         StartCoroutine(FadeOutCoroutine());
         yield return new WaitForSeconds(1);
+
+        GameManager.gm.stageNum = 1;
+
         SceneManager.LoadScene("Junho");
     }
     

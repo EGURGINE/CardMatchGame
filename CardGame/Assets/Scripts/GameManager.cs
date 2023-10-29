@@ -94,6 +94,6 @@ public class GameManager : MonoBehaviour
         stageNum++;
         timeLeft = 60;
         RandPercent.thisPercent = survivePercent;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 }

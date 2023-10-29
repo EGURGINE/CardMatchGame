@@ -50,7 +50,11 @@ public class RoulettePanel : MonoBehaviour
         yield return new WaitForSeconds(5f);
         Debug.Log(clear);
         if (clear) {
-            GameManager.gm.stageResult.open();
+            if (GameManager.gm.stageNum == 10) {
+                GameManager.gm.gameResult.open(GameManager.gm.stageNum, clear);
+            } else {
+                GameManager.gm.stageResult.open();
+            }
         } else {
             GameManager.gm.gameResult.open(GameManager.gm.stageNum, clear);
             GameManager.gm.stageNum = 1;
