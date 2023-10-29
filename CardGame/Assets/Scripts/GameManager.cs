@@ -32,9 +32,11 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        timeLeft = 60;
+        timeLeft = 30;
         stageNum = 0;
+        survivePercent = (int)RandPercent.thisPercent;
         isTimerRunning = false;
+        startTimer();
     }
 
     // Update is called once per frame
@@ -43,7 +45,6 @@ public class GameManager : MonoBehaviour
     }
 
     public void startTimer() {
-        Debug.Log(isTimerRunning);
         if (!isTimerRunning) {
             StartCoroutine(timerCoroutine());
         }
@@ -51,8 +52,8 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator timerCoroutine() {
         isTimerRunning = true;
-        timeLeft = 10;
-        for(int i = 0; i < 10; i++) {
+        timeLeft = 60;
+        for(int i = 0; i < 60; i++) {
             if (!isTimerRunning) {
                 break;
             }
@@ -62,14 +63,10 @@ public class GameManager : MonoBehaviour
 
         isTimerRunning = false;
 
+
+
         if(timeLeft == 0) {
-            gameResult.open(stageNum - 1);
-        } else {
-            if(stageNum == 10) {
-                gameResult.open(10);
-            } else {
-                stageResult.open();
-            }
+            gameResult.open(stageNum, false);
         }
     }
 
@@ -94,7 +91,7 @@ public class GameManager : MonoBehaviour
     public void openNextStage() {
         isTimerRunning = false;
         stageNum++;
-        timeLeft = 60;
+        timeLeft = 30;
         SceneManager.LoadScene(0);
     }
 }

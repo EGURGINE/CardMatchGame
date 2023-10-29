@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using DG;
+using DG.Tweening;
 
 public class GameResultScript : MonoBehaviour {
     public Text text;
@@ -26,21 +26,25 @@ public class GameResultScript : MonoBehaviour {
 
     }
 
-    public void open(int clearedStages) {
-        if (clearedStages == 10) {
+    public void open(int clearedStages, bool isCleared) {
+        int num = clearedStages;
+        if (isCleared) {
             text.text = "Game Clear!";
         } else {
             text.text = "Game Over!";
+            num--;
         }
 
-        for (int i = 0; i < clearedStages; i++) {
-            cats[i].color = Color.blue;
-            //cats[i].sprite = GameManager.gm.catSprites[i];
+        for (int i = 0; i < num; i++) {
+            //cats[i].color = Color.blue;
+            cats[i].sprite = GameManager.gm.catSprites[i];
         }
-        for (int i = clearedStages; i < 10; i++) {
+        for (int i = num; i < 10; i++) {
             //cats[i].color = Color.red;
             cats[i].sprite = GameManager.gm.concealedCat;
         }
+
+        gameObject.transform.DOScale(Vector3.one, 1f);
 
         gameObject.SetActive(true);
     }

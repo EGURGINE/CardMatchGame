@@ -17,13 +17,11 @@ public static class RandPercent
     {
         bool success = false;
 
-        int rand = 10000000;
-
-        float randHitRange = thisPercent * rand;
+        int rand = 100;
 
         int randNum = Random.Range(1, rand + 1);
 
-        if (randNum <= randHitRange)
+        if (randNum <= thisPercent)
         {
             success = true;
         }

@@ -32,7 +32,7 @@ public class CardMatchManager : MonoBehaviour
     private void Start()
     {
 
-        RandPercent.thisPercent = 50f;
+        RandPercent.thisPercent = 5f;
 
         //최대 카드 타입 수
         cardMaxType = (xNum * yNum) / 2;

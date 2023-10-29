@@ -2746,16 +2746,16 @@ MonoBehaviour:
   stageResult: {fileID: 0}
   gameResult: {fileID: 0}
   catSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: b7e67f3fe867a86499cff7311c9d0549, type: 3}
+  - {fileID: 21300000, guid: 0505335c55940984db1c88f969177710, type: 3}
+  - {fileID: 21300000, guid: 9ae8e1cb5556d9b49a3f37563a01e481, type: 3}
+  - {fileID: 21300000, guid: 8c2766ba7963a324e923063ed1aa12da, type: 3}
+  - {fileID: 21300000, guid: b2b661c21c2b4bd4d9b9feeb5b44a2cd, type: 3}
+  - {fileID: 21300000, guid: ad85307d5fcb72b4abc6bc65599edb12, type: 3}
+  - {fileID: 21300000, guid: 719c4d5b5136b9b439d5833112953176, type: 3}
+  - {fileID: 21300000, guid: 65eddea4ff32f0d418d267df92087644, type: 3}
+  - {fileID: 21300000, guid: 162898d94d98ffd45aa751dd2d8f00ba, type: 3}
+  - {fileID: 21300000, guid: 9d28fc5673d178d4aba62170eaa9a761, type: 3}
   concealedCat: {fileID: 21300000, guid: 019d1774d2e86c94a96eadef005c3ca3, type: 3}
 --- !u!4 &1963946852
 Transform:
@@ -2876,7 +2876,7 @@ RectTransform:
   m_GameObject: {fileID: 2030400816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 63484692}
