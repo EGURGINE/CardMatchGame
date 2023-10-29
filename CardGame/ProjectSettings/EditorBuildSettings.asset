@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Junho.unity
-    guid: db477348b4eda6c4ca8618d338963641
+    path: Assets/Scenes/StartScreen.unity
+    guid: b8be2155369b3ee4db64d541ab01ba1e
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Junho.unity
+    guid: db477348b4eda6c4ca8618d338963641
   m_configObjects: {}
