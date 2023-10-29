@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public int survivePercent = 50;
     public int survivedCatNum = 0;
     public int timeLeft = 60;
-    public int stageNum = 0;
+    public int stageNum = 1;
     public bool isTimerRunning = false;
 
 
@@ -32,11 +32,10 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        timeLeft = 30;
-        stageNum = 0;
+        timeLeft = 60;
+        stageNum = 1;
         survivePercent = (int)RandPercent.thisPercent;
         isTimerRunning = false;
-        startTimer();
     }
 
     // Update is called once per frame
@@ -45,6 +44,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void startTimer() {
+        survivePercent = (int)RandPercent.thisPercent;
         if (!isTimerRunning) {
             StartCoroutine(timerCoroutine());
         }
@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour
 
     public void stopTimer() {
         isTimerRunning = false;
+        survivePercent = (int)RandPercent.thisPercent;
     }
 
     public void setPercent(int diff) {
@@ -91,7 +92,8 @@ public class GameManager : MonoBehaviour
     public void openNextStage() {
         isTimerRunning = false;
         stageNum++;
-        timeLeft = 30;
+        timeLeft = 60;
+        RandPercent.thisPercent = survivePercent;
         SceneManager.LoadScene(0);
     }
 }

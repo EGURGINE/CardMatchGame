@@ -52,7 +52,8 @@ public class RoulettePanel : MonoBehaviour
         if (clear) {
             GameManager.gm.stageResult.open();
         } else {
-            GameManager.gm.gameResult.open(3, clear);
+            GameManager.gm.gameResult.open(GameManager.gm.stageNum, clear);
+            GameManager.gm.stageNum = 1;
         }
     }
 }

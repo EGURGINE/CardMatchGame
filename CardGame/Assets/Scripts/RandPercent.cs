@@ -11,7 +11,7 @@ public static class RandPercent
             thisPercent += 5f;
         else
             thisPercent -= 1;
-        Mathf.Clamp(thisPercent, 1f, 99f);
+        thisPercent = Mathf.Clamp(thisPercent, 1f, 99f);
     }
     public static bool GetResult()
     {

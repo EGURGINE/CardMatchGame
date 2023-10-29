@@ -16,7 +16,6 @@ public class CardMatchManager : MonoBehaviour
     private List<int> cardTypeGacha = new List<int> ();
     private List<bool> gameClearChecker = new List<bool> ();
 
-    [SerializeField] private Text percent;
     [SerializeField] private GameObject roulettePanel;
 
     //½Ì±ÛÅæ
@@ -27,12 +26,14 @@ public class CardMatchManager : MonoBehaviour
 
     private void Update()
     {
-        percent.text = RandPercent.thisPercent.ToString() + "%";
     }
     private void Start()
     {
 
-        RandPercent.thisPercent = 5f;
+        if (GameManager.gm.stageNum == 1) {
+            RandPercent.thisPercent = 50f;
+        }
+        GameManager.gm.startTimer();
 
         //ÃÖ´ë Ä«µå Å¸ÀÔ ¼ö
         cardMaxType = (xNum * yNum) / 2;

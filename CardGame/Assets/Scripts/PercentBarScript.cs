@@ -13,7 +13,7 @@ public class PercentBarScript : MonoBehaviour {
     }
     // Update is called once per frame
     void Update() {
-        text.text = "»ýÁ¸ È®·ü: " + GameManager.gm.survivePercent + "%";
+        text.text = "»ýÁ¸ È®·ü: " + RandPercent.thisPercent + "%";
     }
 
 
