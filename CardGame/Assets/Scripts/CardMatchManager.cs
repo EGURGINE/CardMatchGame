@@ -1,7 +1,15 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
+[Serializable]
+public struct MapSize
+{
+    public int x;
+    public int y;
+}
+
 public class CardMatchManager : MonoBehaviour
 {
     public static CardMatchManager Instance;
@@ -15,7 +23,7 @@ public class CardMatchManager : MonoBehaviour
     private List<Card> cardChecker = new List<Card> ();
     private List<int> cardTypeGacha = new List<int> ();
     private List<bool> gameClearChecker = new List<bool> ();
-
+    [SerializeField] private MapSize[] mapSizes;
     [SerializeField] private GameObject roulettePanel;
 
     //½Ì±ÛÅæ
@@ -34,6 +42,9 @@ public class CardMatchManager : MonoBehaviour
             RandPercent.thisPercent = 50f;
         }
         GameManager.gm.startTimer();
+
+        xNum = mapSizes[GameManager.gm.stageNum].x;
+        yNum = mapSizes[GameManager.gm.stageNum].y;
 
         //ÃÖ´ë Ä«µå Å¸ÀÔ ¼ö
         cardMaxType = (xNum * yNum) / 2;
@@ -110,7 +121,7 @@ public class CardMatchManager : MonoBehaviour
                 Card isCard = Instantiate(card,transform);
                 isCard.transform.position = cardPos;
 
-                int ranGachaNum = Random.Range(0, cardTypeGacha.Count);
+                int ranGachaNum = UnityEngine.Random.Range(0, cardTypeGacha.Count);
 
 
                 isCard.CardSet(cardTypeGacha[ranGachaNum]);

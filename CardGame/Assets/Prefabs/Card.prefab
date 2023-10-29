@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2246633921605038682}
   - component: {fileID: 7929656014919200961}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Forward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,6 +184,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4809bfe5e8d55504f80457ad27c518ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: d74f89fa302fb6f4da460176697ed7f3, type: 3}
+  - {fileID: 21300000, guid: f6f8316c19761f24ab5843368f2cb536, type: 3}
+  - {fileID: 21300000, guid: 309e1009a2bd7ef47aa1255bc5bf1db4, type: 3}
+  - {fileID: 21300000, guid: 36d25ed55b167b44cb6265588dbff94a, type: 3}
+  - {fileID: 21300000, guid: 0cb1e20834f7fd64292d310e7372659d, type: 3}
+  - {fileID: 21300000, guid: 3c0bf57a20984d44681fdae15b06f116, type: 3}
+  - {fileID: 21300000, guid: e39a5416c8cf27b47ba26892725f590a, type: 3}
+  - {fileID: 21300000, guid: 763e784e34d980842aabb236830c98d2, type: 3}
+  - {fileID: 21300000, guid: 0354ea40894b9554fbcac34d0ce538f3, type: 3}
+  - {fileID: 21300000, guid: b0f3f8dac8bca534993ae2ce389fd3d0, type: 3}
+  - {fileID: 21300000, guid: 027b0d1b45e52ea4eb46c7eb05007d9d, type: 3}
+  - {fileID: 21300000, guid: 43fcc5631cecf7144a40db3b55d6b2b1, type: 3}
+  - {fileID: 21300000, guid: 733d35f01f534974892aec8c3f44e8e2, type: 3}
+  - {fileID: 21300000, guid: c286455b2d085484484ce92d30baa963, type: 3}
+  - {fileID: 21300000, guid: 8c0f99d976f24bd48a0ffd802f2ef32e, type: 3}
+  - {fileID: 21300000, guid: 40d557a40dfeafd4499a8be40e800c42, type: 3}
   cardType: 0
   isClear: 0
 --- !u!61 &5467958873629303393
@@ -223,7 +240,7 @@ GameObject:
   - component: {fileID: 5947106325979417211}
   - component: {fileID: 6027788188225413433}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
