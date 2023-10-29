@@ -5,12 +5,20 @@ using UnityEngine.EventSystems;
 using DG.Tweening;
 public class Card : MonoBehaviour, IPointerClickHandler
 {
+    [SerializeField] private Sprite[] sprites;
+
+    private SpriteRenderer sr;
+
     public int cardType;
 
     public bool isClear;
     public void CardSet(int type)
     {
+        sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
+
         cardType = type;
+
+        sr.sprite = sprites[cardType];
     }
 
     //클릭했을때 인터페이스
